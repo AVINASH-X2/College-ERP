@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/faculty.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="leftSide">
+            <img src="/images/college_logo_blue.png" alt="">
+            <ul>
+                <li><a href="http://127.0.0.1:3000/welcome">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="http://localhost:3001/chat">chat</a></li>
+            </ul>
+        </div>
+        <div id="middle">
+            <div id="midd1">
+                <div id="greet">
+                    <h2 style="color: #ffffff; font-size: 30px">Hello <%= user.username %><span
+                                style="font-size: 15px;"> (faculty dashboard)</span>
+                    </h2>
+                </div>
+                <div id="logo">
+                    <!-- <img style="width: 255px;" src="/images/logopic.png" alt=""> -->
+                </div>
+            </div>
+            <div id="boxes">
+                <div id="boxraw1">
+                    <div class="box-raw1" id="boxes-raw1-box1">
+                        <li class="program-option" id="list-item">
+                            <a id="anchor-tag" href="#" onclick="toggleYearOptions('home')">Courses</a>
+                            <!-- Year options for Home (initially hidden) -->
+                            <ul class="year-options" id="year-options-home">
+                                <li><a id="anchor-tag" href="http://127.0.0.1:3000/cse_sem1">CSE</a></li>
+                                <li><a id="anchor-tag" href="http://127.0.0.1:3000/eee_courses">EEE</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                    <div class="box-raw1" id="boxes-raw1-box2">
+                        <li class="program-option" id="list-item">
+                            <a id="anchor-tag" href="#" onclick="toggleYearOptions('about')">Attendance</a>
+                            <!-- Year options for About (initially hidden) -->
+                            <ul class="year-options" id="year-options-about">
+                                <li><a id="anchor-tag" href="http://127.0.0.1:3000/cse_year1_att">CSE</a></li>
+                                <li><a id="anchor-tag" href="http://127.0.0.1:3000/eee_att">EEE</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                    <div class="box-raw1" id="boxes-raw1-box3">
+                        <li class="program-option" id="list-item">
+                            <a id="anchor-tag" href="#" onclick="toggleYearOptions('grade')">Grade</a>
+                            <!-- Year options for About (initially hidden) -->
+                            <ul class="year-options" id="year-options-grade">
+                                <li><a id="anchor-tag" href="http://127.0.0.1:3000/cse_year1_grade">CSE</a></li>
+                                <li><a id="anchor-tag" href="http://127.0.0.1:3000/eee_grade">EEE</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                </div>
+                <div id="boxraw2">
+                    <div class="box-raw2-square" id="boxes-raw2-box1">
+                        <li><a href="http://127.0.0.1:3000/announcementStu"><span
+                                    style="font-size: 30px;">Announcement</span></a></li>
+                    </div>
+                    <div class="box-raw2-rect" id="boxes-raw2-rect">
+                        <div class="box-raw2-rect-div" id="boxes-raw2-rect1">
+
+                        </div>
+                        <div class="box-raw2-rect-div" id="boxes-raw2-rect2">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="details">
+                <div id="detaildivs">
+                    <div class="detail-divs">
+                        <p><strong>Name :</strong><span>
+                                <%= user.username %>
+                            </span></p>
+                    </div>
+                    <div class="detail-divs">
+                        <p><strong>Department :</strong><span>
+                                <%= user.department %>
+                            </span></p>
+                    </div>
+                    <div class="detail-divs">
+                        <p><strong>State :</strong><span>
+                                <%= user.state %>
+                            </span></p>
+                    </div>
+                    <div class="detail-divs">
+                        <p><strong>District :</strong><span>
+                                <%= user.district %>
+                            </span></p>
+                    </div>
+                    <div class="detail-divs">
+                        <p><strong>Pin Code :</strong><span>
+                                <%= user.pin %>
+                            </span></p>
+                    </div>
+                    <div class="detail-divs">
+                        <p><strong>Phone :</strong><span>
+                                <%= user.phone %>
+                            </span></p>
+                    </div>
+                    <div class="detail-divs">
+                        <p><strong>Locality :</strong><span>
+                                <%= user.locality %>
+                            </span></p>
+                    </div>
+                    <div class="detail-divs">
+                        <p><strong>Age :</strong><span>
+                                <%= user.age %>
+                            </span></p>
+                    </div>
+                    <div class="detail-divs">
+                        <p><strong>Email :</strong><span>
+                                <%= user.email %>
+                            </span></p>
+                    </div>
+                    <div class="detail-divs">
+                        <p><strong>Gender :</strong><span>
+                                <%= user.gender %>
+                            </span></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    // JavaScript function to toggle the visibility of year options
+function toggleYearOptions(section) {
+    const yearOptions = document.getElementById(`year-options-${section}`);
+    if (yearOptions.style.display === "none" || yearOptions.style.display === "") {
+      yearOptions.style.display = "block"; // Show year options if hidden
+    } else {
+      yearOptions.style.display = "none"; // Hide year options if visible
+    }
+  }
+</script>
+</html>

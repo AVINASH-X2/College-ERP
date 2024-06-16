@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lodin Page for the student</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<style>
+    /* Add the following CSS to your styles.css file */
+    body {
+        display: flex;
+        justify-content: center;
+        /* Center horizontally */
+        align-items: center;
+        /* Center vertically */
+        height: 100vh;
+        /* Make the body fill the viewport height */
+        margin: 0;
+        /* Remove default margin */
+        font-family: 'Caveat', cursive;
+        
+        background: url(./backgrnd[2].gif);
+        
+    }
+    #main-section {
+        text-align: left;
+        border: 1px solid #009866;
+        ;
+        padding: 20px;
+        padding: 30px;
+        margin: 30px auto;
+        backdrop-filter: blur(5px);
+        border-radius: 12px;
+
+    }
+
+    .cont2 {
+        margin: 20px 0;
+        /* Add some vertical spacing between fields */
+        margin: 20px 0;
+        padding: 23px auto;
+        padding: 33px;
+        margin-right: 30px;
+    }
+
+    .cont2 label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 24px;
+        margin-top: 10px;
+        color: #009866;
+    }
+
+    #userid,
+    #pass {
+        font-size: 18px;
+        border: 1px solid gray;
+        border-style: revert;
+        border-radius: 5px;
+        width: 90%;
+    }
+
+
+    h1 {
+        margin-left: 35px;
+        color: #009866;
+    }
+
+    #login {
+        height: 50%;
+        width: 35%;
+        font-size: 25px;
+        margin-left: 23%;
+        margin-top: -10px;
+        border-radius: 12px;
+        color: #009866;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    button {
+        transition: 0.6s;
+        outline: none;
+        border: 2px solid #009866;
+    }
+
+    #login:hover {
+        background: #009866;
+        color: rgb(6, 50, 78);
+    }
+
+    #remember-id {
+        display: inline;
+        font-size: 12px;
+    }
+
+    .rest {
+        justify-content: space-between;
+        margin-top: 35px;
+
+    }
+
+    .rest p {
+        color: black;
+        margin-left: 33px;
+        position: relative;
+    }
+
+    .rest a {
+        color: #009866;
+        text-decoration: none;
+    }
+
+    #for-pass {
+        margin-right: 22px;
+        margin-top: 18px;
+        margin-left: 35px;
+    }
+    #heading h1 a{
+        text-decoration: none;
+        cursor: pointer;
+        color: #009866;
+    }
+
+    .fac-log{
+        margin-left: 222px;
+        margin-top: -23px;
+    }
+    .fac-log a{
+        text-decoration: none;
+        color: #009866;
+    }
+
+   
+
+    /* Adjust the input field's style to fit your design */
+</style>
+
+<body>
+    
+    <section id="main-section">
+        <div id="heading">
+            <h1> <a href="#">Attendance Tracking</a></h1>
+            <!-- <h1><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Faculty Login)</strong></h1> -->
+        </div>
+        <form action="/cse_year1_grade_log" method="POST"> <!-- Specify the action and method for form submission -->
+            <div class="cont2">
+                <label for="username">Enter Username</label>
+                <input id="username" name="username" type="text" pattern=".*"
+                title="Enter your user ID"
+                required>
+                
+
+                <label for="semester">Enter Your Semester</label>
+                <input id="semester" name="semester" type="text" pattern=".*"
+                title="Enter Your Semester"
+                required>
+
+
+                <!-- Use "username" as the name attribute for the username input -->
+                <!-- <label for="password">Enter Semester</label>
+                <input id="password" name="password" type="text" pattern="^[A-Za-z0-9!@#$%^&*]*$"
+                title="Password may include special symbols like !@#$%^&*"
+                required> -->
+                <!-- Use "password" as the name attribute for the password input, and set type to "password" -->
+            </div>
+            <div style="margin-left: 36px"; id="for-login">
+                <button type="submit">Check</button> <!-- Removed the anchor tag and placed a button for form submission -->
+            </div>
+        </form>
+        <div class="rest">
+            <p>Don't have an account? <a href="http://localhost:3000/fac_reg" target="">Sign Up</a></p>
+            <a id="for-pass" href="#">Forgot Password?</a>
+        </div>
+        <div class="fac-log">
+            <a id="fac_anc" href="http://127.0.0.1:3000/login">Student Login</a>
+        </div>
+    </section>
+</body>
+
+</html>

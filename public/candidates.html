@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ... (your head content) ... -->
+</head>
+<style>
+    body {
+        background: url(./images/candidatesss.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 112vh;
+    }
+    #list-item, #list-item1 {
+        list-style: none;
+        padding-top: 15px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #333;
+        width: 243px;
+    }
+
+    #anchor-tag, #anchor-tag1 {
+        text-decoration-line: none;
+        color: #333;
+        display: block;
+        width: 243px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 28px;
+    }
+
+    /* CSS for the program options */
+    .program-option {
+        width: auto; /* Allows the width to adjust based on content */
+        margin-bottom: 10px; /* Adds spacing between program options */
+    }
+
+    /* Year options (initially hidden) */
+    .year-options {
+        display: none;
+        padding-left: 20px;
+    }
+</style>
+<body>
+    <nav id="navbar">
+        <h1 style="font-size: 33px;
+        margin-left: 111px;
+        border-bottom: 2px solid #009866;
+        margin-top: 50px;
+        padding-bottom: 26px;
+        color: #009866;
+        margin-right: 100px;">
+        Choose the Degree Program</h1>
+    </nav>
+    <div>
+        <ul style="width: 211px;
+        
+        margin-left: 110px;
+        margin-top: 79px;
+        padding-top: 22px;
+        padding-bottom: 22px;
+        font-size: 21px;">
+            <li class="program-option" id="list-item">
+                <a id="anchor-tag" href="#" onclick="toggleYearOptions('student')">Student</a>
+                <!-- Year options (initially hidden) -->
+                <ul class="year-options" id="year-options-student">
+                    <li><a id="anchor-tag" href="http://127.0.0.1:3000/">Add Student Candidate</a></li>
+                    <!-- <li><a id="anchor-tag" href="#">Second Year</a></li>
+                    <li><a id="anchor-tag" href="#">Third Year</a></li>
+                    <li><a id="anchor-tag" href="#">Final Year</a></li> -->
+                </ul>
+            </li>
+            <li class="program-option" id="list-item">
+                <a id="anchor-tag" href="#" onclick="toggleYearOptions('faculty')">Faculty</a>
+                <!-- Year options (initially hidden) -->
+                <ul class="year-options" id="year-options-faculty">
+                    <li><a id="anchor-tag" href="http://127.0.0.1:3000/fac_reg">Add Faculty Candidate</a></li>
+                    <!-- <li><a id="anchor-tag" href="#">Second Year</a></li>
+                    <li><a id="anchor-tag" href="#">Third Year</a></li>
+                    <li><a id="anchor-tag" href="#">Final Year</a></li> -->
+                </ul>
+            </li>
+            <li class="program-option" id="list-item">
+                <a id="anchor-tag" href="#" onclick="toggleYearOptions('admin')">Admin</a>
+                <!-- Year options (initially hidden) -->
+                <ul class="year-options" id="year-options-admin">
+                    <li><a id="anchor-tag" href="http://127.0.0.1:3000/admin_reg">Add Admin Candidate</a></li>
+                    <!-- <li><a id="anchor-tag" href="#">Second Year</a></li>
+                    <li><a id="anchor-tag" href="#">Third Year</a></li>
+                    <li><a id="anchor-tag" href="#">Final Year</a></li> -->
+                </ul>
+            </li>
+            
+            <li id="list-item1" style="width: 170px; padding-top: 80px;"><a id="anchor-tag1" href="http://127.0.0.1:3000/admin_log">Back to Login Page</a></li>
+        </ul>
+    </div>
+
+    <script>
+        // JavaScript function to toggle the visibility of year options
+        function toggleYearOptions(program) {
+            const yearOptions = document.getElementById(`year-options-${program}`);
+            yearOptions.style.display = yearOptions.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Your Page Title</title>
+    <style>
+        /* Common styles for all screen sizes */
+        /* Common styles for all screen sizes */
+body {
+    margin: 0;
+    padding: 0;
+    background: url(backgrnd[2].gif);
+    font-family: 'Lora', serif;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 10px;
+    border-bottom: 2px solid #009866;
+    font-size: 20px;
+    font-style: oblique;
+    color: #009866;
+}
+
+#div1 strong:hover {
+    color: #009866;
+    cursor: pointer;
+    border-bottom: 2px solid #009866;
+    transition: 0.8s;
+}
+
+#div1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#div2 {
+    display: block;
+}
+
+.unorder {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 150px;
+    margin-left: 20px;
+    margin-right: 60px;
+    font-size: 25px;
+}
+
+#student, #faculty, #admin {
+    border-bottom: 2px solid #009866;
+    cursor: pointer;
+    margin: 40px; /* Remove default margin */
+    padding: 30px; /* Remove default padding */
+}
+
+#student:hover, #faculty:hover, #admin:hover {
+    cursor: pointer;
+    color: #009866;
+}
+
+
+
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+    #div1 h1 {
+        font-size: 24px;
+    }
+
+    .unorder {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    #student, #faculty, #admin {
+        margin: 5px 0; /* Adjust the margins to control spacing */
+    }
+}
+
+.unorder a{
+    text-decoration: none;
+    color: #333;
+    transition: color 0.5s;
+}
+
+.unorder a:hover{
+    cursor: pointer;
+    color: #009866;
+}
+
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <h1>Thank You for the opportunity</h1>
+    </nav>
+    <div id="div1">
+        <h1>Welcome to <strong>College Management System</strong></h1>
+    </div>
+    <div id="div2">
+        <ul class="unorder">
+            <li id="student"><a id="anchor"  href="http://127.0.0.1:3000/">Student</a></li>
+            <li id="faculty"><a id="anchor"  href="http://127.0.0.1:3000/fac_reg">Faculty</a></li>
+            <li id="admin"><a id="anchor" href="http://127.0.0.1:3000/admin_reg">Admin</a></li>
+        </ul>
+    </div>
+</body>
+</html>

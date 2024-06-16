@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Include any necessary CSS or styling here -->
+</head>
+<body>
+    <h1>Update Subject</h1>
+    
+    <!-- Form for updating the subject -->
+    <form action="/update_announcement/<%= subjectToUpdate._id %>" method="POST">
+        <label for="date">New Date:</label>
+        <input type="text" id="date" name="date" value="<%= subjectToUpdate.date %>" required>
+        <br>
+        <label for="details">New Announcement:</label>
+        <input type="text" id="details" name="details" value="<%= subjectToUpdate.details %>" required>
+        <br>
+
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>

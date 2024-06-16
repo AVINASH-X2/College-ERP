@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/CSS/style.css"> -->
+    <title>Faculty</title>
+</head>
+<style>
+    body{
+        background: url(backgrnd[2].gif);
+    }
+    #nav-bar {
+         /* Background color */
+        color: #fff; /* Text color */
+        padding: 10px; /* Padding on all sides */
+        font-size: 24px; /* Font size */
+        border-bottom: 2px solid #009866;
+        /* transition: 0.5s; */
+    }
+    
+    /* Add this CSS to your existing stylesheet or create a new one */
+    #unorder-list {
+        list-style: none; /* Remove bullets from list items */
+        padding: 10px;
+        margin: 10px; /* Remove default margin */
+        overflow: hidden; /* Clear the float of the last list item */
+    }
+    
+    #unorder-list li {
+        display: inline-block; /* Display list items as blocks to align vertically */
+        vertical-align: middle; /* Vertically align list items */
+        
+    }
+    
+    #unorder-list li:not(:last-child) a {
+        margin-right: 30px; /* Add space between anchor tags, except for the last one */
+        color: #333;
+    }
+    #unorder-list li:not(:last-child) a:hover {
+         /* Add space between anchor tags, except for the last one */
+        color: #009866;
+        border-left: 2px solid #009866;
+        border-bottom: 1px solid #009866;
+    
+    }
+    
+    
+    #unorder-list li:last-child {
+        float: right; /* Float the "Sign Out" link to the right */
+    }
+    
+    #unorder-list li:last-child a {
+        color: #333; /*Set the color of "Sign Out" link to black*/
+        text-decoration: none; /* Remove underlines from the link */
+    }
+    
+    #unorder-list li:last-child a:hover {
+        color: #009866;
+        border-right: 2px solid #009866;
+        border-bottom: 2px solid #009866;
+    }
+    
+    /* 
+    #unorder-list li.active a{
+        font-weight: bold;
+        color: #009866;
+    } */
+    
+    a#anchor{
+        text-decoration: none;
+    }
+    
+    
+    
+    /* Profile section styles */
+    #profile-section {
+        text-align: center;
+        margin-top: 100px; /* Adjust the margin to move the profile section lower */
+        padding: 20px;
+        background-color: #f5f5f5; /* Background color for the profile section */
+        max-width: 400px; /* Set a maximum width for the profile section */
+        margin-left: auto;
+        margin-right: auto;
+        border: 2px solid #009866; /* Add a border to the profile section */
+        border-radius: 10px; /* Add rounded corners to the border */
+        padding: 20px; /* Add padding to the profile section */
+    }
+    
+    #profile-section h2 {
+        color: #009866;
+    }
+    
+    .profile-info {
+        text-align: left;
+        margin-top: 20px;
+    }
+    
+    .profile-info p {
+        font-size: 16px;
+        margin: 10px 0; /* Add margin to top and bottom of each profile info item */
+        width: 80%; /* Set a width for the profile info elements */
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid #ccc; /* Add a border to each profile info item */
+        padding: 10px; /* Add padding to each profile info item */
+    }
+    
+    
+    
+    
+</style>
+<body>
+    <nav id="nav-bar">
+        <!-- <h1>This is the home</h1> -->
+        <ul id="unorder-list">
+            <li class="nav-item"><a id="anchor" href="#">Attendance Tracking Page </a></li>
+
+            <!-- <li class="nav-item" ><a id="anchor" href="http://127.0.0.1:3000/programs">Course Management</a></li> -->
+
+            <!-- <li class="nav-item" ><a id="anchor" href="http://127.0.0.1:3000/CseProgramsAtt">Attendance</a></li> -->
+
+            <!-- <li class="nav-item" ><a id="anchor" href="">Grade Submission</a></li> -->
+            <!-- <li class="nav-item" ><a id="anchor" href="">Free</a></li> -->
+            <li class="nav-item" ><a id="anchor" href="http://127.0.0.1:3000/login">Back</a></li>
+        </ul>
+    </nav>
+    
+    <div id="div1">
+        <h1 style="margin-left: 20px;">Welcome to <a style="text-decoration: none; color:#009866; margin-left: 10px" href="#">Student Attendance Tracking Page</a></h1>
+        <h3 style="text-decoration: none; color:#009866; margin-left: 20px">Welcome <%= user.username %>&nbsp;(Student Dashboard)</h3>
+    </div>
+
+    <div id="profile-section">
+        <h2>Your Attendance Information</h2>
+        <div class="profile-info">
+            <p><strong>Userame:</strong> <%= user.username %></p>
+            <p><strong>Year:</strong> <%= user.year %></p>
+            <p><strong>Semester:</strong> <%= user.semester %></p>
+            <p><strong>Starting Month:</strong> <%= user.starting_month %></p>
+            <p><strong>Ending Month:</strong> <%= user.ending_month %></p>
+            <p><strong>Current Month:</strong> <%= user.current_month %></p>
+            <p><strong>Total Present:</strong> <%= user.total_present %></p>
+            <p><strong>Total Absent:</strong> <%= user.total_absent %></p>
+            <p><strong>Total Leaves:</strong> <%= user.total_leaves %></p>
+            <p><strong>Week 1:</strong> <%= user.week1 %></p>
+            <p><strong>Week 2:</strong> <%= user.week2 %></p>
+            <p><strong>Week 3:</strong> <%= user.week3 %></p>
+            <p><strong>Week 4:</strong> <%= user.week4 %></p>
+            <p><strong>Week 5:</strong> <%= user.week5 %></p>
+            <p><strong>Week 6:</strong> <%= user.week6 %></p>
+            <p><strong>Week 7:</strong> <%= user.week7 %></p>
+            <p><strong>Week 8:</strong> <%= user.week8 %></p>
+            <p><strong>Week 9:</strong> <%= user.week9 %></p>
+            <p><strong>Week 10:</strong> <%= user.week10 %></p>
+            <p><strong>Week 11:</strong> <%= user.week11 %></p>
+            <p><strong>Week 12:</strong> <%= user.week12 %></p>
+            <p><strong>Week 13:</strong> <%= user.week13 %></p>
+            <p><strong>Week 14:</strong> <%= user.week14 %></p>
+            <p><strong>Week 15:</strong> <%= user.week15 %></p>
+            <p><strong>Week 16:</strong> <%= user.week16 %></p>
+            <p><strong>Week 17:</strong> <%= user.week17 %></p>
+            <p><strong>Week 18:</strong> <%= user.week18 %></p>
+            <p><strong>Week 19:</strong> <%= user.week19 %></p>
+            <p><strong>Week 20:</strong> <%= user.week20 %></p>
+        </div>
+    </div>
+    
+    
+</body>
+
+</html>

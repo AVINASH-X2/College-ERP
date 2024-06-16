@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Include any necessary CSS or styling here -->
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+    
+
+    }
+    #head{
+        padding-top: 10px;
+        margin-left: 40px;
+        border-bottom: 1px solid #009866;
+        padding-bottom: 10px;
+    }
+    form{
+        margin-left: 40px;
+       margin-top: 50px;
+       padding: 10px;
+       border: 1px solid #009866;
+       width: 30%;
+    }
+
+    #semester,#subject, #subjectcode, #duration{
+        margin: 10px;
+    }
+</style>
+<body>
+    <h1 id="head" style="color: #009866;">Update Subject</h1>
+    
+    <!-- Form for updating the subject -->
+    <form action="/update_eee_courses/<%= subjectToUpdate._id %>" method="POST">
+        <label for="semester">New Semester:</label>
+        <input type="text" id="semester" name="semester" value="<%= subjectToUpdate.semester %>" required>
+        <br>
+        <label for="subject">New Subject:</label>
+        <input type="text" id="subject" name="subject" value="<%= subjectToUpdate.subject %>" required>
+        <br>
+
+        <label for="subjectcode">New Subject Code:</label>
+        <input type="text" id="subjectcode" name="subjectcode" value="<%= subjectToUpdate.subjectcode %>" required>
+        <br>
+
+        <label for="duration">New Duration:</label>
+        <select name="duration" id="duration">
+            <option value="3 Months">3 Months</option>
+            <option value="4 Months">4 Months</option>
+            <option value="5 Months">5 Months</option></select>
+        <br>
+
+        <button type="submit">Update Subject</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    display: grid;
+    grid-gap: 25px;
+    grid-template-areas: 'leftSide middle middle middle middle middle middle middle '
+        'leftSide middle middle middle middle middle middle middle ';
+}
+
+#leftSide {
+    grid-area: leftSide;
+    height: 114vh;
+    /* border: 1px solid red; */
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(/images/verticle.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-top: 30px;
+}
+
+#leftSide img {
+    margin-top: 100px;
+    width: 70px;
+}
+
+#leftSide ul {
+    margin-top: 10px;
+}
+
+#leftSide ul li {
+    font-size: 22px;
+    list-style: none;
+    margin-top: 45px;
+}
+
+#leftSide ul li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#middle {
+    grid-area: middle;
+    height: 100vh;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-areas: 'midd1 midd1 midd1 midd1 midd1 midd1 midd1 midd1'
+        'boxes boxes boxes boxes boxes boxes details details';
+    /* border: 2px solid brown; */
+}
+
+
+
+#middle #midd1 {
+    grid-area: midd1;
+    height: 11.7rem;
+    /* border: 2px solid rebeccapurple; */
+    border-radius: 15px;
+    margin-top: 42px;
+    display: flex;
+    background: url(/images/wave_background_6.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#middle #midd1 #greet {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#middle #midd1 #logo {
+    width: 60%;
+    display: flex;
+    justify-content: end;
+}
+
+
+#middle #boxes {
+    grid-area: boxes;
+    /* border: 3px solid brown; */
+    height: 30rem;
+    /* display: flex; */
+}
+
+#boxraw1 {
+    display: flex;
+}
+
+.box-raw1 {
+    height: 150px;
+    /* border: 3px solid purple; */
+    border-radius: 10px;
+    width: 33%;
+    /* margin-top: 60px; */
+    margin: 15px;
+}
+
+/* .box-raw1:hover li {
+    transform: translateY(-16px);
+    transition: 0.6s ease;
+} */
+
+#boxraw2 {
+    display: flex;
+    margin-top: 40px;
+}
+
+.box-raw2-square {
+    height: 150px;
+    /* border: 2.7px solid purple; */
+    border-radius: 13px;
+    width: 33%;
+    margin: 20px;
+}
+/* .box-raw2-square:hover li{
+    transform: translateY(-16px);
+    transition: 0.6s ease;
+} */
+
+.box-raw2-rect {
+    height: 150px;
+    /* border: 3px solid #333; */
+    width: 66%;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box-raw2-rect-div {
+    /* border: 2px solid purple; */
+    border-radius: 8px;
+    height: 65px;
+    margin: 7px;
+}
+
+#boxes-raw1-box1 {
+    background: url(/images/course_fac.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#boxes-raw1-box2 {
+    background: url(/images/chart_fac.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#boxes-raw1-box3 {
+    background: url(/images/grade_fac.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#boxes-raw2-box1 {
+    background: url(/images/ann_fac.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.box-raw2-rect-div {
+    background: url(/images/light_back.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.box-raw1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-raw1 li {
+    list-style: none;
+    font-size: 25px;
+}
+
+.box-raw1 li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.box-raw2-square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-raw2-square li {
+    list-style: none;
+}
+
+.box-raw2-square li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#middle #details {
+    grid-area: details;
+    /* border: 2px solid blue; */
+    height: 37rem;
+    border-bottom: 4px solid purple;
+    border-left: 3px solid purple;
+    border-radius: 15px;
+}
+
+#detaildiv {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.detail-divs {
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    height: 50px;
+    margin-top: 6px;
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+}
+
+.detail-divs p {
+    /* text-indent: 25px; */
+    position: absolute;
+    /* left: 20px; */
+    padding-left: 20px;
+    font-size: 17px;
+}
+
+
+.year-options {
+    display: none; /* Initially hide year options */
+}

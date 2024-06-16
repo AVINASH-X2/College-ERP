@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Include any necessary CSS or styling here -->
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+
+    #head{
+        margin-left: 20px;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #009866;
+    }
+
+    form{
+        
+        border: 1px solid #009866;
+        width: 30%;
+        margin: 20px;
+    }
+
+    #username, #department, #semester, #total_subjects, #iat1, #iat2, #iat3, #endSemesterResult, #overall_cgpa, #class_rank{
+        margin: 20px;
+    }
+
+</style>
+<body>
+    <div id="head">
+        <h1 style="color:#009866;">Update Subject</h1>
+    </div>
+    
+    <!-- Form for updating the subject -->
+    <form action="/update_eee_grade/<%= dataToUpdate._id %>" method="POST">
+        
+        <label for="username">New Username:</label>
+        <input type="text" id="username" name="username" value="<%= dataToUpdate.username %>" required>
+        <br>
+
+        <label for="department">New Department:</label>
+        <input type="text" id="department" name="department" value="<%= dataToUpdate.department %>" required>
+        <br>
+
+        <label for="semester">New Semester:</label>
+        <input type="text" id="semester" name="semester" value="<%= dataToUpdate.semester %>" required>
+        <br>
+
+        <label for="starting_month">New Total Subjects:</label>
+        <input type="text" id="total_subjects" name="total_subjects" value="<%= dataToUpdate.total_subjects %>" required>
+        <br>
+        
+        <label for="iat1">New IAT 1:</label>
+        <input type="text" id="iat1" name="iat1" value="<%= dataToUpdate.iat1 %>" required>
+        <br>
+
+        <label for="iat2">New IAT 2:</label>
+        <input type="text" id="iat2" name="iat2" value="<%= dataToUpdate.iat2 %>" required>
+        <br>
+
+        <label for="iat3">New IAT 3:</label>
+        <input type="text" id="iat3" name="iat3" value="<%= dataToUpdate.iat3 %>" required>
+        <br>
+
+        <label for="endSemesterResult">New Final Result:</label>
+        <input type="text" id="endSemesterResult" name="endSemesterResult" value="<%= dataToUpdate.endSemesterResult %>" required>
+        <br>
+
+        <label for="total_absent">New Overall CGPA:</label>
+        <input type="text" id="overall_cgpa" name="overall_cgpa" value="<%= dataToUpdate.overall_cgpa %>" required>
+        <br>
+
+        <label for="class_rank">New Class Rank:</label>
+        <input type="text" id="class_rank" name="class_rank" value="<%= dataToUpdate.class_rank %>" required>
+        <br>
+
+        <button type="submit">Update Subject</button>
+    </form>
+</body>
+</html>

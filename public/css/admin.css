@@ -1,0 +1,459 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    display: grid;
+    grid-gap: 25px;
+    grid-template-areas: 'leftSide middle middle middle middle middle middle middle '
+        'leftSide middle middle middle middle middle middle middle ';
+}
+
+#leftSide {
+    grid-area: leftSide;
+    height: 150vh;
+    /* border: 1px solid red; */
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(/images/verticle.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-top: 30px;
+}
+
+#leftSide img {
+    margin-top: 100px;
+    width: 70px;
+}
+
+#leftSide ul {
+    margin-top: 10px;
+}
+
+#leftSide ul li {
+    font-size: 22px;
+    list-style: none;
+    margin-top: 45px;
+}
+
+#leftSide ul li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#leftSide #item2{
+    /* margin-top: 18rem; */
+    list-style: none;
+}
+
+#leftSide #item2 a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 23px;
+}
+
+
+#middle {
+    grid-area: middle;
+    height: 100vh;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-areas: 'midd1 midd1 midd1 midd1 midd1 midd1 midd1 midd1'
+        'boxes boxes boxes boxes boxes boxes details details';
+    /* border: 2px solid brown; */
+}
+
+
+
+#middle #midd1 {
+    grid-area: midd1;
+    height: 11.7rem;
+    /* border: 2px solid rebeccapurple; */
+    border-radius: 15px;
+    margin-top: 42px;
+    display: flex;
+    background: url(/images/wave_background_6.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#middle #midd1 #greet {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#middle #midd1 #logo {
+    width: 60%;
+    display: flex;
+    justify-content: end;
+}
+
+
+#middle #boxes {
+    grid-area: boxes;
+    /* border: 3px solid brown; */
+    height: 30rem;
+    /* display: flex; */
+}
+
+#boxraw1 {
+    display: flex;
+}
+
+.box-raw1 {
+    height: 150px;
+    /* border: 3px solid purple; */
+    border-radius: 10px;
+    width: 33%;
+    /* margin-top: 60px; */
+    margin: 15px;
+}
+
+.box-raw1:hover li {
+    transform: translateY(-16px);
+    transition: 0.6s ease;
+}
+
+#boxraw2 {
+    display: flex;
+    margin-top: 40px;
+}
+
+.box-raw2-square {
+    height: 150px;
+    /* border: 2.7px solid purple; */
+    border-radius: 13px;
+    width: 33%;
+    margin: 20px;
+}
+
+.box-raw2-square:hover li {
+    transform: translateY(-16px);
+    transition: 0.6s ease;
+}
+
+.box-raw2-rect {
+    height: 150px;
+    /* border: 3px solid #333; */
+    width: 66%;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box-raw2-rect-div {
+    /* border: 2px solid purple; */
+    border-radius: 8px;
+    height: 65px;
+    margin: 7px;
+}
+
+#boxes-raw1-box1 {
+    background: url(/images/course_fac.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#boxes-raw1-box2 {
+    background: url(/images/chart_fac.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#boxes-raw1-box3 {
+    background: url(/images/grade_fac.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#boxes-raw2-box1 {
+    background: url(/images/ann_fac.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.box-raw2-rect-div {
+    background: url(/images/light_back.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.box-raw1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-raw1 li {
+    list-style: none;
+    font-size: 25px;
+}
+
+.box-raw1 li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.box-raw2-square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-raw2-square li {
+    list-style: none;
+}
+
+.box-raw2-square li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 25px;
+
+}
+
+#boxraw3{
+    display: flex;
+    /* border: 3px solid red; */
+    height: 12rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+
+}
+.raw3boxes{
+    /* border: 3px solid blue; */
+    /* width: 33%; */
+    height: 150px;
+    /* margin: 15px; */
+    margin: 20px;
+
+}
+
+#raw3box1{
+    background: url(/images/light_back.jpg) no-repeat;
+    /* border: 3px solid blue; */
+    width: 35%;
+    height: 150px;
+    /* margin: 15px; */
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#raw3box1 li{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-size: 25px;
+}
+#raw3box1 a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* #raw3box1:hover li {
+    transform: translateY(-16px);
+    transition: 0.6s ease;
+} */
+
+
+#raw3box2, #raw3box3{
+    width: 33%;
+}
+
+
+#middle #details {
+    grid-area: details;
+    /* border: 2px solid blue; */
+    height: 37rem;
+    border-bottom: 4px solid purple;
+    border-left: 3px solid purple;
+    border-radius: 15px;
+}
+
+#detaildiv {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.detail-divs {
+    /* border: 1px solid #ccc; */
+    border-radius: 12px;
+    height: 50px;
+    margin-top: 6px;
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+}
+
+.detail-divs p {
+    /* text-indent: 25px; */
+    position: absolute;
+    /* left: 20px; */
+    padding-left: 20px;
+    font-size: 17px;
+}
+
+/* Mobile-first approach */
+@media only screen and (max-width: 768px) {
+    #container {
+      grid-template-areas:
+        'leftSide'
+        'middle';
+      grid-template-columns: 1fr;
+    }
+    
+    
+
+    #middle #midd1 {
+      flex-direction: column;
+    }
+  
+    #middle #midd1 #greet,
+    #middle #midd1 #logo {
+      width: 100%;
+    }
+
+    #middle #boxraw3 #raw3box1{
+        width: 140%;
+        margin-left: 0;
+    }
+  
+    .box-raw1,
+    .box-raw2-square {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    #detaildivs {
+      flex-direction: column;
+    }
+  }
+  
+  /* Tablet and Desktop styles */
+  @media only screen and (min-width: 769px) {
+    #container {
+      grid-template-areas: 'leftSide middle';
+      grid-template-columns: 15% 85%;
+    }
+  
+    #leftSide{
+        height: 141vh;
+    }
+
+    #middle #midd1 {
+      height: 200px; /* Adjust height for larger screens */
+    }
+  
+    .box-raw1,
+    .box-raw2-square {
+      /* width: calc(50% - 20px); */
+      margin: 10px;
+    }
+
+    #middle #boxraw3 #raw3box1{
+        margin-left: 10px;
+        width: 36%;
+    }
+  
+    .box-raw1:hover li,
+    .box-raw2-square:hover li {
+      transform: none;
+      transition: none;
+    }
+
+    #middle #details{
+        height: 46rem;
+    }
+  
+    #detaildivs {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  
+    .detail-divs {
+      width: calc(33.33% - 20px);
+      margin-right: 20px;
+      margin-bottom: 20px;
+    }
+  
+    .detail-divs:last-child {
+      margin-right: 0;
+    }
+  }
+
+  /* Mobile-first approach */
+@media only screen and (max-width: 480px) {
+    #container {
+      grid-template-areas:
+        'leftSide'
+        'middle';
+      grid-template-columns: 1fr;
+    }
+    
+    #leftSide{
+        height: 105vh;
+        width: 123%;
+    }
+
+    #middle #midd1{
+        width: 125%;
+    }
+
+    #leftSide ul li {
+      font-size: 18px; /* Decrease font size for smaller screens */
+      margin-top: 20px; /* Adjust spacing */
+    }
+  
+    #leftSide img {
+      margin-top: 50px; /* Adjust logo position */
+      width: 50px; /* Decrease logo size */
+    }
+  
+    #leftSide #item2 a {
+      font-size: 20px; /* Decrease font size for logout link */
+    }
+  
+    #middle #boxraw1 li{
+        font-size: 15px;
+    }   
+
+    .box-raw1,
+    .box-raw2-square {
+      width: 100%;
+      margin: 10px 0;
+    }
+
+    #middle #boxraw3 #raw3box1{
+        width: 270%;
+        margin-left: 0;
+    }
+
+    .box-raw1 li a,
+    .box-raw2-square li a {
+      font-size: 18px; /* Decrease font size for box links */
+    }
+
+    #middle #details{
+        height: 45rem;
+    }
+  
+    #detaildivs {
+      flex-direction: column;
+    }
+  
+    .detail-divs {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+
+  }

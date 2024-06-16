@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Link to your CSS file -->
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<style>
+  .info-box{
+    border: 2px solid #009866;
+    padding: 20px;
+  }
+  body{
+    background: url(backgrnd[2].gif);
+  }
+</style>
+<body>
+  <div>
+    <!-- Include your HTML content directly here -->
+    <div style="margin-left: 137px;
+      margin-top: 50px;
+      border: none;
+      color: #009866;
+      border-bottom: 2px solid #009866;
+      margin-right: 132px;">
+      <h1>Announcement Dashboard</h1>
+    </div>
+    <div style="margin-left: 140px;
+      margin-right: 140px;
+      margin-top: 98px;">
+      <% announce.forEach((student, index) => { %>
+        <div class="info-box">
+          <div class="student-row">
+            <span class="label-cell"><strong>Announcement Date:</strong></span>
+            <span class="value-cell"><%= student.date %></span>
+          </div>
+          <div class="student-row">
+            <span class="label-cell"><strong>Announcement:</strong></span>
+            <span class="value-cell"><%= student.details %></span>
+          </div>
+
+          <!-- <div class="student-row">
+            <span class="label-cell"><strong>Program:</strong></span>
+            <span class="value-cell"><%= student.program %></span>
+          </div> -->
+      
+          <!-- Move the "Update" link inside the loop -->
+          <a style="    text-decoration-line: none;
+          border: none;
+          font-size: 20px;
+          border-bottom: 2px solid #009866;
+          /* float: right; */
+          padding-bottom: 0px;
+          color: #009866;
+          font-size: 23px;
+          display: flex;
+          justify-content: center;
+          border: none;
+          " href="http://127.0.0.1:3000/announcementUpdate/<%= student._id %>">Update</a>
+
+        </div>
+        <% if (index !== announce.length - 1) { %>
+          <hr class="collection-separator">
+        <% } %>
+      <% }); %>
+      
+    </div>
+    <div style="margin-left: 143px;
+      margin-top: 36px; margin-bottom:50px">
+      <a style="text-decoration-line: none;
+        border: none;
+        font-size: 20px;
+        border-bottom: 2px solid #009866;
+        padding-bottom:10px;
+        color: #009866;
+      " href="http://127.0.0.1:3000/new_announcement">Add Announcement</a>
+      <a style="text-decoration-line: none;
+        border: none;
+        font-size: 20px;
+        border-bottom: 2px solid #009866;
+        float: right;
+        margin-right: 143px;
+        padding-bottom: 10px;
+        color: #009866;
+      " href="http://127.0.0.1:3000/admin_log">Back</a>
+
+      <!-- <a style="text-decoration-line: none;
+        border: none;
+        font-size: 20px;
+        border-bottom: 2px solid #009866;
+        float: right;
+        margin-right: 143px;
+        padding-bottom: 10px;
+        color: #009866;
+      " href="http://127.0.0.1:3000/update_sem1/:id">Update</a> -->
+    </div>
+  </div>
+</body>
+</html>

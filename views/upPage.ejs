@@ -1,0 +1,43 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PDF Uploader</title>
+</head>
+
+<body>
+    <div>
+        <h1 style="margin-left: 20px; padding-top: 20px; color: #009866; border-bottom: 2px solid #009866;">Study
+            Materials</h1>
+        <!-- <form action="/upload" method="POST" enctype="multipart/form-data">
+            <input type="file" name="pdfFile" accept=".pdf" required>
+            <button type="submit">Upload PDF</button>
+        </form> -->
+    </div>
+    <div style="display: flex; justify-content: center; " >
+        <h2>Uploaded PDFs:</h2>
+    </div>
+    <div style="display: flex; justify-content: center; padding-top: 30px;">
+        <ul>
+            <% files.forEach(function(file) { %>
+                <li style="padding: 10px;">
+                    <a style="text-decoration: none; border-bottom: 1px solid; color:blueviolet;" href="/download/<%= file._id %>">
+                        <%= file.name %>
+                    </a>
+                    <a style="margin-left: 40px; text-decoration: none; color: #009866;"
+                        href="/delete/<%= file._id %>">Delete</a>
+                </li>
+                <% }); %>
+        </ul>
+    </div>
+
+    <div style="display: flex; justify-content: center; padding-top: 30px; ">
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <input type="file" name="pdfFile" accept=".pdf" required>
+            <button type="submit">Upload PDF</button>
+        </form>
+    </div>
+</body>
+
+</html>

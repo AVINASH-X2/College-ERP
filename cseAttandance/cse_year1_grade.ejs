@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Link to your CSS file -->
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<style>
+  .info-box{
+    border: 2px solid #009866;
+    padding: 20px;
+  }
+</style>
+<body>
+  <div>
+    <!-- Include your HTML content directly here -->
+    <div style="margin-left: 137px;
+      margin-top: 50px;
+      border: none;
+      color: #009866;
+      border-bottom: 2px solid #009866;
+      margin-right: 132px;">
+      <h1>Grade Submission Dashboard</h1>
+    </div>
+    <div style="margin-left: 140px;
+      margin-right: 140px;
+      margin-top: 98px;">
+      <% cse_year1_grade.forEach((student, index) => { %>
+        <div class="info-box">
+          <div class="student-row">
+            <span class="label-cell"><strong>Id:</strong></span>
+            <span class="value-cell"><%= student.id %></span>
+          </div>
+          <div class="student-row">
+            <span class="label-cell"><strong>Username:</strong></span>
+            <span class="value-cell"><%= student.username %></span>
+          </div>
+          <div class="student-row">
+            <span class="label-cell"><strong>Department:</strong></span>
+            <span class="value-cell"><%= student.department %></span>
+          </div>
+          <div class="student-row">
+            <span class="label-cell"><strong>Semester:</strong></span>
+            <span class="value-cell"><%= student.semester %></span>
+          </div>
+          <div class="student-row">
+            <span class="label-cell"><strong>Total Subjects:</strong></span>
+            <span class="value-cell"><%= student.total_subjects %></span>
+          </div>
+          <div class="student-row">
+            <span class="label-cell"><strong>IAT 1:</strong></span>
+            <span class="value-cell"><%= student.iat1 %></span>
+          </div>
+          <div class="student-row">
+            <span class="label-cell"><strong>IAT 2:</strong></span>
+            <span class="value-cell"><%= student.iat2 %></span>
+          </div>
+          <div class="student-row">
+            <span class="label-cell"><strong>IAT3:</strong></span>
+            <span class="value-cell"><%= student.iat3 %></span>
+          </div>
+          <div class="student-row">
+            <span class="label-cell"><strong>End Semester Result:</strong></span>
+            <span class="value-cell"><%= student.endSemesterResult %></span>
+          </div>
+          <div class="student-row">
+            <span class="label-cell"><strong>Overall CGPA:</strong></span>
+            <span class="value-cell"><%= student.overall_cgpa %></span>
+          </div>
+          <div class="student-row">
+            <span class="label-cell"><strong>Class Rank:</strong></span>
+            <span class="value-cell"><%= student.class_rank %></span>
+          </div>
+          
+          <!-- <div class="student-row">
+            <span class="label-cell"><strong>Program:</strong></span>
+            <span class="value-cell"><%= student.program %></span>
+          </div> -->
+      
+          <!-- Move the "Update" link inside the loop -->
+          <a style="    text-decoration-line: none;
+          border: none;
+          font-size: 20px;
+          border-bottom: 2px solid #009866;
+          /* float: right; */
+          padding-bottom: 0px;
+          color: #009866;
+          font-size: 23px;
+          display: flex;
+          justify-content: center;
+          border: none;
+          " href="http://127.0.0.1:3000/cse_year1_grade_upd/<%= student._id %>">Update</a>
+
+        </div>
+        <% if (index !== cse_year1_grade.length - 1) { %>
+          <hr class="collection-separator">
+        <% } %>
+      <% }); %>
+      
+    </div>
+    <div style="margin-left: 143px;
+      margin-top: 36px; margin-bottom:50px">
+      <a style="text-decoration-line: none;
+        border: none;
+        font-size: 20px;
+        border-bottom: 2px solid #009866;
+        padding-bottom:10px;
+        color: #009866;
+      " href="http://127.0.0.1:3000/cse_add_year1_grade">Add New Data</a>
+      <a style="text-decoration-line: none;
+        border: none;
+        font-size: 20px;
+        border-bottom: 2px solid #009866;
+        float: right;
+        margin-right: 143px;
+        padding-bottom: 10px;
+        color: #009866;
+      " href="http://127.0.0.1:3000/CseProgramsAtt">Back</a>
+
+      <!-- <a style="text-decoration-line: none;
+        border: none;
+        font-size: 20px;
+        border-bottom: 2px solid #009866;
+        float: right;
+        margin-right: 143px;
+        padding-bottom: 10px;
+        color: #009866;
+      " href="http://127.0.0.1:3000/update_sem1/:id">Update</a> -->
+    </div>
+  </div>
+</body>
+</html>

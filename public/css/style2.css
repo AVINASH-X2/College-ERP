@@ -1,0 +1,432 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#container {
+    width: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    width: 100%;
+    height: 4.5rem;
+    display: flex;
+    background-color: #009866;
+    /* position: fixed; */
+}
+
+.navbar img {
+    width: 65px;
+    margin-left: 20px;
+}
+
+.navbar ul {
+    /* border: 2px solid black; */
+    width: 95%;
+    margin-left: 50px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.navbar ul li {
+    list-style: none;
+    font-size: 22px;
+    padding: 25px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    background-image: url(../images/hercules-hall-surrounded-by-greenery-sunlight-daytime-munich-germany.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+
+}
+
+.container h1 {
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+    font-size: 55px;
+    text-align: center;
+}
+
+.items {
+    display: flex;
+    z-index: 1;
+    margin-top: 10rem;
+    padding: 50px;
+}
+
+.div1,
+.div2,
+.div3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 33%;
+    height: 6rem;
+    border: 2px solid #ffffff;
+    margin: 30px;
+    /* padding: 40px; */
+}
+
+.items .div1 img {
+    width: 15%;
+    margin-top: -75px;
+    border-radius: 35px;
+}
+
+.items .div2 img {
+    width: 15%;
+    margin-top: -75px;
+    border-radius: 35px;
+
+}
+
+.items .div3 img {
+    width: 15%;
+    margin-top: -75px;
+    border-radius: 35px;
+}
+
+.div1 h2 a,
+.div2 h2 a,
+.div3 h2 a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+#div2,
+#div3 {
+    font-family: "Roboto Mono", monospace;
+    height: 32rem;
+    display: flex;
+    margin-top: 2rem;
+}
+
+#div4 {
+    font-family: "Roboto Mono", monospace;
+    height: 40rem;
+    display: flex;
+    margin-top: 2rem;
+}
+
+#div2 img,
+#div4 img {
+    margin-top: 5.5rem;
+    margin-left: 2rem;
+    margin-bottom: 3rem;
+    height: 30rem;
+    width: 94%;
+    border-radius: 8px;
+}
+
+#div2 #student {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* border: 3px solid red; */
+    height: 20rem;
+    margin-top: 15rem;
+    width: 50%;
+    /* border: 3px solid red; */
+    margin-left: 17rem;
+}
+
+#div2 #student p {
+    width: 44%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 5rem;
+    font-size: 18px;
+}
+
+
+#div3 img {
+    margin-top: 5.5rem;
+    margin-right: 2rem;
+    margin-bottom: 3rem;
+    height: 30rem;
+    width: 94%;
+    border-radius: 8px;
+}
+
+#div3 #faculty {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* border: 3px solid red; */
+    height: 20rem;
+    margin-top: 15rem;
+    width: 50%;
+    /* border: 3px solid yellow; */
+    margin-right: 17rem;
+    margin-left: 8rem;
+}
+
+#div4 #admin {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* border: 3px solid red; */
+    height: 20rem;
+    margin-top: 15rem;
+    width: 50%;
+    /* border: 3px solid red; */
+    margin-left: 17rem;
+}
+
+#div3 #faculty p {
+    width: 44%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 5rem;
+    font-size: 18px;
+}
+
+#div4 #admin p {
+    width: 44%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 5rem;
+    font-size: 18px;
+}
+
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    /* half of the viewport width */
+    height: 20px;
+    background-color: #ffffff;
+    color: white;
+    padding: 20px;
+    transition: transform 0.3s ease, width 0.3s ease;
+    /* transition for smooth appearance */
+    transform: translateY(-100%);
+    /* initially hide sidebar above the viewport */
+    overflow: hidden;
+    /* Hide overflowing content */
+    display: flex;
+    /* Display elements in a row */
+    align-items: center;
+    /* Center items vertically */
+}
+
+#sidebar.visible {
+    transform: translateY(0);
+    /* show sidebar */
+    width: 100%;
+    /* full width when visible */
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 13px;
+    display: flex;
+    /* Display list items in a row */
+}
+
+#sidebar ul li {
+    margin-right: 80px;
+    /* Add some space between list items */
+}
+
+#sidebar ul li:last-child {
+    margin-right: 0;
+    /* Remove margin from the last list item */
+}
+
+#sidebar ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#functions {
+    height: 75rem;
+    margin-top: 1rem;
+    padding: 120px;
+    /* background: #333; */
+}
+
+#functions-heading {
+    font-family: "Roboto Mono", monospace;
+    display: flex;
+    justify-content: center;
+}
+
+#functions-box1,
+#functions-box2 {
+    display: flex;
+    margin-top: 2rem;
+    padding: 50px;
+}
+
+#functions-box1 #functions-boxes {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 25%;
+    height: 22rem;
+    /* border: 3px solid red; */
+    margin: 10px;
+    border-radius: 7px;
+    box-shadow: rgba(6, 24, 44, 0.1) 0px 0px 0px 2px,
+        rgba(6, 24, 44, 2) 0px 4px 6px -0.5px,
+        rgba(255, 255, 255, 2) 0px 1px 0px inset;
+    ;
+}
+
+/* #functions-box1 #functions-boxes h3 {
+    margin-bottom: 1rem;
+} */
+
+#functions-box1 #functions-boxes h3 a {
+    text-decoration: none;
+    color: #4b8ef1;
+    font-size: 28px;
+}
+
+.functions-boxes1,
+.functions-boxes2,
+.functions-boxes3,
+.functions-boxes4 {
+    background-position: center;
+    background-size: cover;
+}
+
+.functions-boxes1 {
+    background-image: url(/images/pro.jpg);
+}
+
+.functions-boxes2 {
+    background-image: url(/images/cou.jpg);
+}
+
+.functions-boxes3 {
+    background-image: url(/images/preview.jpg);
+}
+
+.functions-boxes4 {
+    background-image: url(/images/gra.jpg);
+}
+
+#functions-box2 #functions-boxes2 {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 25%;
+    height: 20rem;
+    /* border: 3px solid green; */
+    margin: 10px;
+    border-radius: 7px;
+    box-shadow: rgba(6, 24, 44, 0.1) 0px 0px 0px 2px,
+        rgba(6, 24, 44, 2) 0px 4px 6px -0.5px,
+        rgba(255, 255, 255, 2) 0px 1px 0px inset;
+    ;
+}
+
+.functions-box2-boxes1,
+.functions-box2-boxes2,
+.functions-box2-boxes3,
+.functions-box2-boxes4 {
+    background-position: center;
+    background-size: cover;
+}
+
+.functions-box2-boxes1 {
+    background-image: url(/images/fe.jpg);
+}
+
+.functions-box2-boxes2 {
+    background-image: url(/images/stud.jpg);
+}
+
+.functions-box2-boxes3 {
+    background-image: url(/images/ann.jpg);
+}
+
+.functions-box2-boxes4 {
+    background-image: url(/images/can.jpg);
+}
+
+.functions-boxes1:hover,
+.functions-boxes2:hover,
+.functions-boxes3:hover,
+.functions-boxes4:hover,
+.functions-box2-boxes1:hover,
+.functions-box2-boxes2:hover,
+.functions-box2-boxes3:hover,
+.functions-box2-boxes4:hover {
+    transform: translateY(-15px);
+    transition-timing-function: ease-out;
+    transition: 0.6s;
+}
+
+/* #functions-box2 #functions-boxes2 h3 {
+    margin-top: 2.5rem;
+} */
+
+#functions-box2 #functions-boxes2 h3 a {
+    text-decoration: none;
+    font-size: 28px;
+    color: #4b8ef1;
+}
+
+#contact {
+    height: 20rem;
+    background: #333;
+    display: flex;
+}
+
+#contact-div1,
+#contact-div2,
+#contact-div3 {
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid purple; */
+    width: 33%;
+    align-items: center;
+    margin-top: 4.3rem;
+}
