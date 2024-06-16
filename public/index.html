@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>College Management System</title>
+    
+</head>
+<style>
+    /* Apply styles to the entire body */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 115vh;
+        background: url(./images/servicesss.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+
+    
+
+
+    /* Style the main section */
+    #main-section {
+        background-color: #fff;
+        padding: 20px;
+        /*border: 1px solid #009866;*/
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        backdrop-filter: blur(5px);
+        width: 34%;
+
+    }
+
+    /* Style the heading */
+    #heading {
+        margin-bottom: 20px;
+    }
+
+    #heading h1:last-child {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 24px;
+        color: #333;
+    }
+
+    a {
+        text-decoration: none;
+        color: #333;
+    }
+
+    /* Style form container */
+    .cont2 {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px 0px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    input[type="radio"] {
+        margin-right: 5px;
+    }
+
+    /* Style the login button */
+    button[type="submit"] {
+
+        color: #fff;
+        padding: 10px 20px;
+        border: solid #009866 2px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    #for-login button:hover {
+        transition: 0.5s;
+        background-color: #009866;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+
+    /* Style the "Sign Up" link and "Forgot Password" link */
+    .rest a,
+    #for-pass {
+        text-decoration: none;
+        color: #007BFF;
+        margin-right: 10px;
+    }
+
+    .rest a:hover,
+    #for-pass:hover {
+        text-decoration: underline;
+    }
+
+    /* Style the "Faculty Login" link */
+    #fac_anc {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        font-size: 18px;
+        margin-top: 20px;
+        display: block;
+        border-bottom: solid #009866 2px;
+        width: 20%;
+        margin-left: 208px;
+    }
+
+    #fac_anc:hover {
+        color: #009866;
+    }
+
+    #stg {
+        margin-right: 75px;
+    }
+
+    input#username,
+    #department,
+    #semester,
+    #locality,
+    #state,
+    #dist,
+    #pin,
+    #phone,
+    #email,
+    #password {
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    select#gender {
+        margin-bottom: 12px;
+        font-size: 15px;
+        border-radius: 5px;
+    }
+
+    #thelogin {
+        color: #009866;
+    }
+
+    #thelogin:hover {
+        color: #009866;
+        text-decoration-line: none;
+    }
+
+    #for-login button {
+
+        color: black;
+    }
+
+    #phone {
+        padding: 10px 0px;
+        margin-bottom: 10px;
+        width: 100%;
+
+        border: 1px solid #ccc;
+
+    }
+
+    .alert{
+        display: none;
+        color: red;
+    }
+    
+
+    @media (max-width: 768px) {
+        #fac_anc {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 20px;
+            display: block;
+            border-bottom: solid #009866 2px;
+            width: 20%;
+            margin-left: 105px;
+        }
+
+    }
+</style>
+
+
+
+<body>
+    <section id="main-section">
+        <div id="heading">
+            <h1><a style="color:#009866" href="#">College Management System</a></h1>
+            <h1><strong style="color:#009866"
+                    id="stg">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Student Registration)</strong>
+            </h1>
+        </div>
+        <form id="myForm" action="/RegistrationStudent" method="POST"> <!-- Specify the action and method for form submission -->
+            <div class="cont2">
+                <!-- <label for="username">Enter User Id</label> -->
+                <input placeholder="Enter user ID" id="username" name="username" type="text" pattern=".*"
+                    title="Enter your user ID" required>
+
+                <input placeholder="Enter Department" id="department" name="department" type="text" pattern=".*"
+                    title="Enter Department" required>
+
+                <input placeholder="Enter Semester" id="semester" name="semester" type="text" pattern=".*"
+                    title="Enter Semester" required>
+
+                <input placeholder="Enter user's State" id="state" name="state" type="text" pattern=".*"
+                    title="Enter user's state" required>
+
+                <input placeholder="Enter user's district" id="dist" name="district" type="text" pattern=".*"
+                    title="Enter user's district" required>
+
+                <input placeholder="Enter user's pin code" id="pin" name="pin" type="text" pattern=".*"
+                    title="Enter user's pin code" required>
+
+                <input placeholder="Enter user's locality" id="locality" name="locality" type="text" pattern=".*"
+                    title="Enter user's locality" required>
+
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number (e.g., 6XXXXXXXXX)"
+                    required pattern="[6-9][0-9]{9}"
+                    title="Please enter a 10-digit phone number starting with 6 or higher">
+
+
+
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                    <!-- <option value="NaMard">NaMard</option> -->
+
+                    <!-- <label for="password">Enter Password</label> -->
+                    <input placeholder="Enter your password" id="password" name="password" type="password"
+                        pattern="^(?=.*[A-Za-z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,}$"
+                        title="Password must be at least 8 characters long and include at least one letter, one digit, and one special symbol (!@#$%^&*)"
+                        required>
+
+                    <!-- Use "password" as the name attribute for the password input, and set type to "password" -->
+            </div>
+            <div id="for-login">
+                <button id="addButton" type="submit" onclick="checkForm()">Add</button>
+                <!-- Removed the anchor tag and placed a button for form submission -->
+            </div>
+        </form>
+        <div class="alert" id="alertMessage">All fields are required</div>
+        <div class="fac-log">
+            <a id="fac_anc" href="http://127.0.0.1:3000/candidates">Back</a>
+        </div>
+    </section>
+
+</body>
+
+<script>
+    function checkForm() {
+        const name = document.getElementById('username').value;
+        const email = document.getElementById('email').value;
+        const alertMessage = document.getElementById('alertMessage');
+
+        if (!name || !email) {
+            alertMessage.style.display = 'block';
+        } else {
+            alertMessage.style.display = 'none';
+            // You can submit the form or perform other actions here
+        }
+    }
+</script>
+
+</html>

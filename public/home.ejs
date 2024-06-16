@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="./css/home.css">
+</head>
+
+<body>
+    <div id="container">
+        <header id="navbar">
+            <div id="nav-div1">
+                <img style="width: 7%;" src="./images/college_logo_blue.png" alt="">
+                <h3 style="margin-top: 0.8rem; font-size: 25px; color:#333; border-bottom: 1px solid #333;">Anna
+                    University</h3>
+            </div>
+            <div id="nav-div2">
+                <img style="border-radius: 15px;" src="./images/profpic.jpg" alt="">
+                <h2 style="margin-right: 25px; margin-top: 1.5rem; font-size: 20px;"><a
+                        style="text-decoration: none; color: #333;" href="">
+                        <%= user.username %> |<span style="font-size: 15px;">
+                                <%= user.semester %> Semester
+                            </span>
+                    </a>
+                </h2>
+            </div>
+        </header>
+
+        <div id="leftSide">
+            <ul id="first-ul">
+                <li><a style="border-bottom: 2px solid #333;" href="">Profile</a></li>
+                <li class="program-option" id="list-item">
+                    <a id="anchor-tag" href="#" onclick="toggleYearOptions('home')">Courses</a>
+                    <!-- Year options for Home (initially hidden) -->
+                    <ul class="year-options" id="year-options-home">
+                        <li><a id="anchor-tag" href="http://127.0.0.1:3000/s_cse_sem1">CSE</a></li>
+                        <li><a id="anchor-tag" href="http://127.0.0.1:3000/s_eee">EEE</a></li>
+                    </ul>
+                </li>
+                <li class="program-option" id="list-item">
+                    <a id="anchor-tag" href="#" onclick="toggleYearOptions('about')">Attendance</a>
+                    <!-- Year options for About (initially hidden) -->
+                    <ul class="year-options" id="year-options-about">
+                        <li><a id="anchor-tag" href="http://127.0.0.1:3000/cse_year1_log">CSE</a></li>
+                        <li><a id="anchor-tag" href="http://127.0.0.1:3000/eee_log">EEE</a></li>
+                    </ul>
+                </li>
+                <li class="program-option" id="list-item">
+                    <a id="anchor-tag" href="#" onclick="toggleYearOptions('grade')">Grade</a>
+                    <!-- Year options for About (initially hidden) -->
+                    <ul class="year-options" id="year-options-grade">
+                        <li><a id="anchor-tag" href="http://127.0.0.1:3000/cse_year1_grade_log">CSE</a></li>
+                        <li><a id="anchor-tag" href="http://127.0.0.1:3000/eee_grade_log">EEE</a></li>
+                    </ul>
+                </li>
+                <li class="program-option" id="list-item">
+                    <a id="anchor-tag" href="http://127.0.0.1:3000/upPageS">Resources</a>
+                    <!-- Year options for About (initially hidden) -->
+                    <!-- <ul class="year-options" id="year-options-resourses">
+                        <li><a id="anchor-tag" href="#">CSE</a></li>
+                        <li><a id="anchor-tag" href="#">EEE</a></li>
+                    </ul> -->
+                </li>
+                <li><a href="http://127.0.0.1:3000/payHome">Fee Payment</a></li>
+                <li><a href="http://127.0.0.1:3001/chat">Chat</a></li>
+            </ul>
+            <h2 id="logout"><a href="http://127.0.0.1:3000/welcome">Log out</a></h2>
+        </div>
+
+        <div id="middle">
+
+            <div id="middle-div1">
+                <div id="imgdiv">
+                    <img src="./images/profpng.png" alt="">
+                    <h1 style="font-size: 25px;">Student Dashboard</h1>
+                </div>
+            </div>
+            <div id="middle-div2">
+                <div id="box1">
+                    <div id="name">
+                        <p><Strong>Name :</Strong>&nbsp;<%= user.username %>
+                        </p>
+                    </div>
+                    <div id="dep">
+                        <p><Strong>Department :</Strong>&nbsp; <%= user.department %>
+                        </p>
+                    </div>
+
+                </div>
+
+                <div id="box2">
+                    <div id="name">
+                        <p><Strong>Semester :</Strong>&nbsp; <%= user.semester %>
+                        </p>
+                    </div>
+                    <div id="dep">
+                        <p><Strong>State :</Strong>&nbsp;<%= user.state %>
+                        </p>
+                    </div>
+                </div>
+                <div id="box3">
+                    <div id="name">
+                        <p><Strong>District :</Strong>&nbsp;<%= user.district %>
+                        </p>
+                    </div>
+                    <div id="dep">
+                        <p><Strong>Pin :</Strong>&nbsp;<%= user.pin %>
+                        </p>
+                    </div>
+                </div>
+                <div id="box4">
+                    <div id="name">
+                        <p><Strong>Phone :</Strong>&nbsp;<%= user.phone %>
+                        </p>
+                    </div>
+                    <div id="dep">
+                        <p><Strong>locality :</Strong>&nbsp;<%= user.locality %>
+                        </p>
+                    </div>
+                </div>
+                <div id="box4">
+                    <div id="name">
+                        <p><Strong>Email :</Strong>&nbsp;<%= user.email %>
+                        </p>
+                    </div>
+                    <div id="dep">
+                        <p><Strong>Gender :</Strong>&nbsp;<%= user.gender %>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div id="boxes">
+                <div class="box-div" id="box-div1">
+                    <h2><a href="http://127.0.0.1:3000/CseProgShowStu">Attendance</a></h2>
+                    <h2 style="margin-top: 1.6rem; font-size: 30px;"><a href="">39%</a></h2>
+                </div>
+                <div class="box-div" id="box-div2">
+                    <h2><a href="http://127.0.0.1:3000/s_programs">Course</a></h2>
+                    <h2 style="margin-top: 1.6rem; font-size: 30px;"><a href="http://127.0.0.1:3000/s_programs">40%</a></h2>
+                </div>
+                <div class="box-div" id="box-div3">
+                    <h2><a href="">Performance</a></h2>
+                    <h2 style="margin-top: 1.6rem; font-size: 30px;"><a href="">average<span
+                                style="font-size: 20px;">(55%)</span>
+                        </a></h2>
+                </div>
+                <div class="box-div" id="box-div4">
+                    <h2><a href="http://127.0.0.1:3000/announcementStu">Announcements</a></h2>
+                    <h2 style="margin-top: 1.6rem; font-size: 30px;"><a href="http://127.0.0.1:3000/announcementStu">2
+                            new</a></h2>
+                </div>
+            </div>
+        </div>
+</body>
+
+<script>
+    // JavaScript function to toggle the visibility of year options
+function toggleYearOptions(section) {
+    const yearOptions = document.getElementById(`year-options-${section}`);
+    if (yearOptions.style.display === "none" || yearOptions.style.display === "") {
+      yearOptions.style.display = "block"; // Show year options if hidden
+    } else {
+      yearOptions.style.display = "none"; // Hide year options if visible
+    }
+  }
+</script>
+
+</html>
