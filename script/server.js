@@ -11,8 +11,8 @@ const multer = require('multer');
 const nodemailer = require("nodemailer")
 
 //Stripe Payment...
-var Publishable_Key = 'pk_test_51NwnPeSEMBwOMTpxOEaDa4DRAEnAw0C0WtRKlel5UsLqOS0Arz0DMeZiGL2evysViURw58Llvt4tDCM2Nw4WiJvX00bUJcP2HB'
-var Secret_Key = 'sk_test_51NwnPeSEMBwOMTpxGh9wuhKQ8TcV1Vu6eeUVKcEDY1rCJIJYmqsGAwERrUkR4hoiNfdeUXDHbMdfIi33vmAqIsnl00qiWK6iQf'
+var Publishable_Key = 'YOUR_PUBLISHABLE_KEY'
+var Secret_Key = 'YOUR_STRIPE_API_KEY'
 
 // UserSchemas/Models...
 const {User,Faculty,Admin,Detail,File,Semester1,eeeCourses,Announcement,c_y_1,c_y1_g,eee_att,eee_grade,contactModel} = require("./models")
